@@ -1,4 +1,4 @@
-# New Generation Streaming Serivce
+# New Generation Streaming Service
 
 # Setup with docker
 I have created a Make file to make setup easy - if you have a docker install in the system. It will create and update .env file, build up the docker container, install composer, run the migration and run the tests.
