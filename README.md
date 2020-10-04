@@ -16,7 +16,7 @@ change the Database details:
 
 ```
 DB_CONNECTION=mysql
-DB_HOST=db
+DB_HOST=ngs_db
 DB_PORT=3306
 DB_DATABASE=default
 DB_USERNAME=root
