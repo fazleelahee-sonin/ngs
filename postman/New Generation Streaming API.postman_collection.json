@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "239d344c-6b04-4563-ae65-19ecfe637055",
+		"name": "New Generation Streaming API",
+		"description": "All API requests must set the header content type is appilication/json.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Channels",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/channels",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"channels"
+					]
+				},
+				"description": "Get List of channels"
+			},
+			"response": [
+				{
+					"name": "Channels",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/channels",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"channels"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.15.8"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 03 Oct 2020 04:00:35 GMT"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"uuid\": \"119b7b67-e4ec-368b-b4f9-9adad6198ed3\",\n            \"name\": \"White. TV\",\n            \"icon\": \"https://lorempixel.com/gray/25/25/?24701\"\n        },\n        {\n            \"uuid\": \"48999ae2-3a67-3ef8-9f0c-cfb5c1192923\",\n            \"name\": \"The. TV\",\n            \"icon\": \"https://lorempixel.com/gray/25/25/?43665\"\n        },\n        {\n            \"uuid\": \"f7b26966-9f06-3d6d-bfe3-412799b9e000\",\n            \"name\": \"Panther. TV\",\n            \"icon\": \"https://lorempixel.com/gray/25/25/?40475\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Progrmme Timetable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/channels/77706673-de40-340c-abcf-387b6b26540f/2020-10-20/timezone/{{timezone}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"channels",
+						"77706673-de40-340c-abcf-387b6b26540f",
+						"2020-10-20",
+						"timezone",
+						"{{timezone}}"
+					]
+				},
+				"description": "Programme timetable for a selected channel, date and timezone\r\n\r\nAcceptable URL parameter:\r\n\r\nuuid: valid channel uuid.\r\n\r\ndate: acceptable date format is: Y-m-d.\r\n\r\nTimezone: accaptable timezone format is: europe/london"
+			},
+			"response": []
+		},
+		{
+			"name": "Programme Information",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/channels/77706673-de40-340c-abcf-387b6b26540f/programmes/fe9d1679-c391-355a-acc0-6873c3dc4fd5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"channels",
+						"77706673-de40-340c-abcf-387b6b26540f",
+						"programmes",
+						"fe9d1679-c391-355a-acc0-6873c3dc4fd5"
+					]
+				},
+				"description": "channel uuid: valid channel uuid.\r\nprogramme uuid: valid programme uuid "
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "73fd97f5-6790-4cd1-8c33-963e84300b88",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a40d0ae2-0f77-4335-b246-6cf4e96986a2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "129f82bc-2467-4a09-97a0-8f9f84acba5a",
+			"key": "base_url",
+			"value": "http://new-generation-streaming.local/api/v1"
+		},
+		{
+			"id": "c7416c13-164c-43f8-8e1a-30e79defc5fe",
+			"key": "timezone",
+			"value": "europe/london"
+		},
+		{
+			"id": "423aaec2-1d0d-404a-aab6-27577644c6d7",
+			"key": "preview_date",
+			"value": "2020-09-22"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
