@@ -4,6 +4,12 @@
 I have created a Make file to make setup easy - if you have a docker install in the system. It will create and update .env file, build up the docker container, install composer, run the migration and run the tests.
 
 
+```
+$ git clone https://github.com/fazleelahee-sonin/ngs.git ngs
+$ cd ngs
+$ make
+```
+
 Note: makefile developed and tested in the Mac OS. Technically it should work in Linux or WSL.
 
 # Setup without make
