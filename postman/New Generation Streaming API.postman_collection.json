@@ -185,17 +185,17 @@
 	],
 	"variable": [
 		{
-			"id": "129f82bc-2467-4a09-97a0-8f9f84acba5a",
+			"id": "0b8080e7-06e7-4dce-815f-137dabea64e3",
 			"key": "base_url",
-			"value": "http://new-generation-streaming.local/api/v1"
+			"value": "http://localhost/api/v1"
 		},
 		{
-			"id": "c7416c13-164c-43f8-8e1a-30e79defc5fe",
+			"id": "1d42a30b-ff12-4294-bca6-b8eb20f59dff",
 			"key": "timezone",
 			"value": "europe/london"
 		},
 		{
-			"id": "423aaec2-1d0d-404a-aab6-27577644c6d7",
+			"id": "99eafd9b-0be1-4220-a62a-11a3f307cc97",
 			"key": "preview_date",
 			"value": "2020-09-22"
 		}

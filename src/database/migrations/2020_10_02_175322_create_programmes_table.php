@@ -19,9 +19,9 @@ class CreateProgrammesTable extends Migration
             $table->string('name', 100);
             $table->string('description');
             $table->string('thumbnail');
-            $table->string('day_on_streaming');
-            $table->string('start_time');
-            $table->string('end_time');
+            $table->string('day_on_streaming', 15);
+            $table->string('start_time', 5);
+            $table->string('end_time', 5);
             $table->integer('sequence');
             $table->timestamps();
 

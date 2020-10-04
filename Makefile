@@ -1,11 +1,11 @@
 install:
-	@cp .env.example temp.env
-	@sed -i '' '/DB_.*HOST/s/=.*/=db/g' temp.env
-	@sed -i '' '/DB_.*DATABASE/s/=.*/=default/g' temp.env
-	@sed -i '' '/DB_.*PASSWORD/s/=.*/=root/g' temp.env
-	@mv temp.env .env
+	@cp ./src/.env.example ./src/temp.env
+	@sed -i '' '/DB_.*HOST/s/=.*/=ngs_db/g' ./src/temp.env
+	@sed -i '' '/DB_.*DATABASE/s/=.*/=default/g' ./src/temp.env
+	@sed -i '' '/DB_.*PASSWORD/s/=.*/=root/g' ./src/temp.env
+	@mv ./src/temp.env ./src/.env
 	@docker-compose up -d
-	@docker-compose exec app composer install
-	@docker-compose exec app php artisan key:generate
-	@docker-compose exec app php artisan migrate:refresh --seed
-	@docker-compose exec app php artisan test
+	@docker-compose exec ngs_app composer install
+	@docker-compose exec ngs_app php artisan key:generate
+	@docker-compose exec ngs_app php artisan migrate:refresh --seed
+	@docker-compose exec ngs_app php artisan test
